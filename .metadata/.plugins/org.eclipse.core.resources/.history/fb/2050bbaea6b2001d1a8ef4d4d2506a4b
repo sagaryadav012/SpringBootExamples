@@ -1,0 +1,22 @@
+package com.learnings.demo.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import com.learnings.demo.repository.EmployeRepo;
+
+public class EmployeController 
+{
+	@Autowired
+	EmployeRepo repo;
+	
+	@RequestMapping("/")
+	   public String getStudent(@RequestParam int id)
+	   {
+		   
+		   // Testing new methods
+		   System.out.println(repo.findById(id)); // fetch data who have tech = java
+		   
+		   return "Sagar";   
+	   }
+}

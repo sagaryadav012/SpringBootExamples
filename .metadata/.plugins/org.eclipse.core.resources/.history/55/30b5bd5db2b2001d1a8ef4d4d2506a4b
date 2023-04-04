@@ -1,0 +1,49 @@
+package com.learnings.demo.controllers;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.learnings.demo.model.Employee;
+import com.learnings.demo.repository.EmployeRepo;
+
+@RestController
+public class EmployeController 
+{
+	@Autowired
+	EmployeRepo repo;
+	
+	  @RequestMapping(path="/employees", produces = {"application/xml"})
+	   @ResponseBody // here we are telling to MVC that we returning data not view
+	   public List<Employee> getStudents()
+	   {
+		   return repo.findAll();   
+	   }
+	   
+	   @RequestMapping("/employee/{id}")
+	   @ResponseBody // here we are telling to MVC that we returning data not view
+	   public Optional<Employee> getStudent(@PathVariable("id") int id)
+	   {
+		   return repo.findById(id);
+	   }
+	
+	
+//	   @RequestMapping("/employees")
+//	   @ResponseBody // here we are telling to MVC that we returning data not view
+//	   public String getStudents()
+//	   {
+//		   return repo.findAll().toString();   
+//	   }
+//	   
+//	   @RequestMapping("/employee/{id}")
+//	   @ResponseBody // here we are telling to MVC that we returning data not view
+//	   public String getStudent(@PathVariable("id") int id)
+//	   {
+//		   return repo.findById(id).toString();
+//	   }
+}

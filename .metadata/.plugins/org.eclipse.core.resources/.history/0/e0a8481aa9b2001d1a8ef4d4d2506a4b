@@ -1,0 +1,11 @@
+package com.learnings.demo.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.learnings.demo.model.Employee;
+
+
+public interface EmployeRepo extends CrudRepository<Employee, Integer>
+{
+
+}

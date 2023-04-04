@@ -1,0 +1,5 @@
+package com.learnings.demo.dao;
+
+public interface StudentRepo {
+
+}

@@ -1,0 +1,19 @@
+package com.learnings.demo.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import com.learnings.demo.repository.EmployeRepo;
+
+@Controller
+public class EmployeController 
+{
+	@Autowired
+	EmployeRepo repo;
+	
+	@RequestMapping("/employees")
+	   public String getStudent()
+	   {
+		   return "Home.jsp";   
+	   }
+}

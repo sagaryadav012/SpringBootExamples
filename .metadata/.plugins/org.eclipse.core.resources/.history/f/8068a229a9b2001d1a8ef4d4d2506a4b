@@ -1,0 +1,30 @@
+package com.learnings.demo.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.learnings.demo.repository.EmployeRepo;
+
+@Controller
+public class EmployeController 
+{
+	@Autowired
+	EmployeRepo repo;
+	
+	   @RequestMapping("/employees")
+	   @ResponseBody // here we are telling to MVC that we returning data not view
+	   public String getStudents()
+	   {
+		   return repo.findAll().toString();   
+	   }
+	   
+	   @RequestMapping("/employees/{id}")
+	   @ResponseBody // here we are telling to MVC that we returning data not view
+	   public String getStudent(@PathVariable("id") int id)
+	   {
+		   return repo.findById(id).toString();
+	   }
+}

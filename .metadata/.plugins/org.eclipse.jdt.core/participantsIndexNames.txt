@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+C:\SpringBootExamples\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1761378295.index
+\WebCrudDemo\src\main\java
+C:\SpringBootExamples\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\798756016.index
+\SpringbootRestJPAExample\src\main\java
+C:\SpringBootExamples\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3561209246.index
+\MyWebAppDemo\src\main\java
+C:\SpringBootExamples\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\475253284.index
+\SpringbootRest\src\main\java
+C:\SpringBootExamples\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3770854126.index
+\MyWebAppDemo\src\main\java

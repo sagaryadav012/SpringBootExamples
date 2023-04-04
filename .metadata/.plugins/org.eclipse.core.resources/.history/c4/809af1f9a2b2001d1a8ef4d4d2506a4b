@@ -1,0 +1,10 @@
+package com.learnings.demo.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.learnings.demo.model.Student;
+                                                // class name, primaryKey dataType
+public interface StudentRepo extends CrudRepository<Student, Integer>
+{
+   List<Student> findByTech(String tech);
+}

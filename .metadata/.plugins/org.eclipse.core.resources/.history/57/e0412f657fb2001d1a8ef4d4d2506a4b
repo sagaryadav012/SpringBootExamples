@@ -1,0 +1,30 @@
+package com.learnings.demo.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.learnings.demo.dao.StudentRepo;
+import com.learnings.demo.model.Student;
+
+@Controller
+public class StudentController 
+{
+	
+	@Autowired
+	StudentRepo repo;
+	
+   @RequestMapping("/")
+   public String home()
+   {
+	   //System.out.println("Hi");
+	   return "home.jsp";
+   }
+   
+   @RequestMapping("/addStudent")
+   public String addStudent(Student stud)
+   {
+	   repo.save(stud);
+	   return "home.jsp";
+   }
+}

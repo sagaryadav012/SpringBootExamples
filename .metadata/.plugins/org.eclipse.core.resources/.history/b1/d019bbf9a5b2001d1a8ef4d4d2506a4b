@@ -1,0 +1,5 @@
+package com.learnings.demo.repository;
+
+public interface EmployeRepo {
+
+}
